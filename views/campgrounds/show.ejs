@@ -1,0 +1,13 @@
+<%layout('layouts/boilerplate')%>
+
+    <h1>This is the show page</h1>
+    <h1><%= campground.title %></h1>
+    <p><%= campground.location %></p>
+    <a href="/campgrounds/<%= campground._id%>/edit"> edit</a>
+
+    <a href="/campgrounds"> All campgrounds</a>
+         <p>
+        <form action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+        </p>
